@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade">
+    <n>PLG_SYSTEM_GOOGLE_ANALYTICS_4</n>
+    <author>MENJ</author>
+    <creationDate>September 2023</creationDate>
+    <copyright>Copyright (C) 2023-2026 MENJ</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>contact@menj.org</authorEmail>
+    <authorUrl>https://menj.net</authorUrl>
+    <version>2.1.0</version>
+    <description>PLG_SYSTEM_GOOGLE_ANALYTICS_4_XML_DESCRIPTION</description>
+    <namespace path="src">MENJ\Plugin\System\GoogleAnalytics4</namespace>
+    <files>
+        <folder plugin="google_analytics_4">services</folder>
+        <folder>src</folder>
+        <filename>index.html</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_system_google_analytics_4.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="measurement_id"
+                    type="text"
+                    default=""
+                    label="PLG_SYSTEM_GOOGLE_ANALYTICS_4_MEASUREMENT_ID_LABEL"
+                    description="PLG_SYSTEM_GOOGLE_ANALYTICS_4_MEASUREMENT_ID_DESC"
+                    size="40"
+                    required="true"
+                />
+                <field
+                    name="anonymize_ip"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    default="1"
+                    label="PLG_SYSTEM_GOOGLE_ANALYTICS_4_ANONYMIZE_IP_LABEL"
+                    description="PLG_SYSTEM_GOOGLE_ANALYTICS_4_ANONYMIZE_IP_DESC"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <fieldset name="consent" label="PLG_SYSTEM_GOOGLE_ANALYTICS_4_CONSENT_FIELDSET_LABEL">
+                <field
+                    name="consent_note"
+                    type="note"
+                    label="PLG_SYSTEM_GOOGLE_ANALYTICS_4_CONSENT_NOTE_LABEL"
+                    description="PLG_SYSTEM_GOOGLE_ANALYTICS_4_CONSENT_NOTE_DESC"
+                />
+                <field
+                    name="default_analytics_storage"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    default="denied"
+                    label="PLG_SYSTEM_GOOGLE_ANALYTICS_4_DEFAULT_ANALYTICS_STORAGE_LABEL"
+                    description="PLG_SYSTEM_GOOGLE_ANALYTICS_4_DEFAULT_ANALYTICS_STORAGE_DESC"
+                >
+                    <option value="denied">PLG_SYSTEM_GOOGLE_ANALYTICS_4_CONSENT_DENIED</option>
+                    <option value="granted">PLG_SYSTEM_GOOGLE_ANALYTICS_4_CONSENT_GRANTED</option>
+                </field>
+                <field
+                    name="default_ad_storage"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    default="denied"
+                    label="PLG_SYSTEM_GOOGLE_ANALYTICS_4_DEFAULT_AD_STORAGE_LABEL"
+                    description="PLG_SYSTEM_GOOGLE_ANALYTICS_4_DEFAULT_AD_STORAGE_DESC"
+                >
+                    <option value="denied">PLG_SYSTEM_GOOGLE_ANALYTICS_4_CONSENT_DENIED</option>
+                    <option value="granted">PLG_SYSTEM_GOOGLE_ANALYTICS_4_CONSENT_GRANTED</option>
+                </field>
+                <field
+                    name="default_ad_user_data"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    default="denied"
+                    label="PLG_SYSTEM_GOOGLE_ANALYTICS_4_DEFAULT_AD_USER_DATA_LABEL"
+                    description="PLG_SYSTEM_GOOGLE_ANALYTICS_4_DEFAULT_AD_USER_DATA_DESC"
+                >
+                    <option value="denied">PLG_SYSTEM_GOOGLE_ANALYTICS_4_CONSENT_DENIED</option>
+                    <option value="granted">PLG_SYSTEM_GOOGLE_ANALYTICS_4_CONSENT_GRANTED</option>
+                </field>
+                <field
+                    name="default_ad_personalization"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    default="denied"
+                    label="PLG_SYSTEM_GOOGLE_ANALYTICS_4_DEFAULT_AD_PERSONALIZATION_LABEL"
+                    description="PLG_SYSTEM_GOOGLE_ANALYTICS_4_DEFAULT_AD_PERSONALIZATION_DESC"
+                >
+                    <option value="denied">PLG_SYSTEM_GOOGLE_ANALYTICS_4_CONSENT_DENIED</option>
+                    <option value="granted">PLG_SYSTEM_GOOGLE_ANALYTICS_4_CONSENT_GRANTED</option>
+                </field>
+                <field
+                    name="wait_for_update"
+                    type="number"
+                    default="500"
+                    min="0"
+                    max="5000"
+                    label="PLG_SYSTEM_GOOGLE_ANALYTICS_4_WAIT_FOR_UPDATE_LABEL"
+                    description="PLG_SYSTEM_GOOGLE_ANALYTICS_4_WAIT_FOR_UPDATE_DESC"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
